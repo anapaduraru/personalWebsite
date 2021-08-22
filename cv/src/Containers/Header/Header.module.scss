@@ -1,0 +1,154 @@
+@import '../../main.scss';
+@import '../../theme.scss';
+
+@media only screen and (max-width: 2000px) and (min-width: 802px){ 
+.wrapper {
+  .headerContainer {
+    @include header;
+    a {
+      text-decoration: none !important;
+      color:black;
+      @include layout(row, center, center);
+    }
+    
+    .firstChild {
+      @include layout(row, space-evenly, flex-start);
+      margin-left: 20%;
+      width: 10%;
+      border-bottom: 1px solid rgba(194, 194, 194, 1);
+      border-top: 1px solid rgba(194, 194, 194, 1);
+      h3 {
+        font: normal normal 400 1rem Montserrat;
+      } 
+    }
+    .secondChild {
+      @include layout(column, center, center);
+      width: 30%;
+      img {
+        width: 60%;
+      }
+      h3 {
+        font: normal normal bold 1.3rem Montserrat;
+        color:rgb(34, 34, 73);
+      } 
+    }
+    
+    .thirdChild {
+      @include layout(row, space-evenly, flex-start);
+      width: 10%;
+      margin-right: 20%;
+      border-bottom: 0.5px solid  rgba(194, 194, 194, 1);
+      border-top: 1px solid  rgba(194, 194, 194, 1);
+      h3 {
+        font: normal normal 400 1rem Montserrat;
+      } 
+    }
+  }
+  .mobile {
+    display: none !important;
+  }
+}
+}
+
+@media only screen and (max-width: 801px) and (min-width: 451px){ 
+  .wrapper {
+    .mobile {
+      display: none;
+    }
+    .headerContainer {
+      @include header;
+      a {
+        text-decoration: none !important;
+        color:black;
+        @include layout(row, center, center);
+      }
+      
+      .firstChild {
+        @include layout(row, space-evenly, flex-start);
+        width: 17%;
+        margin-left: 15%;
+        border-bottom: 1px solid rgba(194, 194, 194, 1);
+        border-top: 1px solid rgba(194, 194, 194, 1);
+        h3 {
+          font: normal normal 400 0.8rem Montserrat;
+        } 
+      }
+      .secondChild {
+        @include layout(column, center, center);
+        width: 30%;
+        img {
+          width: 90%;
+        }
+        h3 {
+          font: normal normal bold 1rem Montserrat;
+          color:rgb(34, 34, 73);
+        } 
+      }
+      
+      .thirdChild {
+        @include layout(row, space-evenly, flex-start);
+        width: 17%;
+        margin-right: 15%;
+        border-bottom: 0.5px solid  rgba(194, 194, 194, 1);
+        border-top: 1px solid  rgba(194, 194, 194, 1);
+        h3 {
+          font: normal normal 400 0.8rem Montserrat;
+        } 
+      }
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 450px) { 
+  .wrapper {
+    .headerContainer{
+      display: none !important;
+    }
+    .mobile {
+      @include headermobile;
+      a {
+        text-decoration: none !important;
+        color:black;
+        @include layout(row, center, center);
+      }
+      
+      .firstChild {
+        @include layout(column, center, center);
+        width: 55%;
+        img {
+          width: 100%;
+        }
+        h3 {
+          font: normal normal bold 1rem Montserrat;
+          color:rgb(34, 34, 73);
+        } 
+      }
+      .secondChild {
+        @include layout(row, space-evenly, center);
+        width:80%;
+        margin-top: 10%;
+        .firstColumn {
+          @include layout(row, space-evenly, center);
+          width:40%;
+          margin-right: 20%;
+          border-bottom: 0.5px solid  rgba(194, 194, 194, 1);
+          border-top: 1px solid  rgba(194, 194, 194, 1);
+          h3 {
+            font: normal normal 400 0.85rem Montserrat;
+          } 
+        }
+        .secondColumn {
+          @include layout(row, space-evenly, center);
+          width:40%;
+          border-bottom: 0.5px solid  rgba(194, 194, 194, 1);
+          border-top: 1px solid  rgba(194, 194, 194, 1);
+          h3 {
+            font: normal normal 400 0.85rem Montserrat;
+          } 
+        }
+      }
+    }
+  }
+  
+}

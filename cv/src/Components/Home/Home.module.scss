@@ -1,0 +1,418 @@
+@import '../../main.scss';
+@import '../../theme.scss';
+
+.homeContainer{
+    @include content;
+
+    .firstChild{
+        @include layout(row, space-between, center);
+        width:50%;
+        margin:0% 25%;
+        padding: 5% 0%;
+        .firstColumn{
+            @include layout(column, flex-start, flex-start);
+            width:40%;
+            h1 {
+                font: normal normal bold Montserrat;
+                color:$primaryColor;
+                margin-bottom:4%;
+                padding: 0;
+            }
+            p {
+                margin:0;
+                padding: 0;
+                width:90%;
+                font-family: $font;
+            }
+        }
+        .secondColumn {
+            @include layout(column, flex-start, flex-start);
+            width:45%;
+            img {
+                width:100%;
+            }
+        }
+    }
+    .secondChild {
+        @include layout(column, flex-start, flex-start);
+        width:55%;
+        margin:0% 25%;
+        padding: 5% 0%;
+        h1 {
+            font: normal normal bold Montserrat;
+            color:$primaryColor;
+            margin-bottom:4%;
+            padding: 0;
+        }
+        .firstLine{
+            @include layout(row, space-between, center);
+            width:100%;
+            padding-bottom: 10%;
+            .firstColumn {
+                @include layout(column, flex-start, flex-start);
+                width:40%;
+                h2 {
+                    font: normal normal bold 1.2rem Montserrat;
+                    color:$primaryColor;
+                    margin-bottom:4%;
+                    padding: 0;
+                }
+                p {
+                    margin:0;
+                    padding: 0;
+                    width:90%;
+                    font-family: $font;
+                }
+            }
+        
+            .secondColumn {
+                @include layout(column, flex-start, flex-start);
+                width:45%;
+                img {
+                    width:80%;
+                }
+            }
+            
+        }
+        .secondLine {
+            @include layout(row, space-between, center);
+            width:100%;
+            .firstColumn {
+                width:40%;
+                h2 {
+                    font: normal normal bold 1.2rem Montserrat;
+                    color:$primaryColor;
+                    margin-bottom:4%;
+                    padding: 0;
+                }
+                p {
+                    margin:0;
+                    padding: 0;
+                    width:90%;
+                    font-family: $font;
+                }
+            }
+        
+            .secondColumn {
+                @include layout(column, flex-start, flex-start);
+                width:45%;
+                img {
+                    width:80%;
+                }
+            }
+            
+        }
+    }
+    .thirdChild {
+        @include layout(column, flex-start, flex-start);
+        width:60%;
+        margin:0% 25%;
+        padding: 10% 0%;
+        h1 {
+            font: normal normal bold Montserrat;
+            color:$primaryColor;
+            margin-bottom:4%;
+            padding: 0;
+        }
+        .firstColumn{
+            @include layout(column, flex-start, flex-start);
+            width:100%;
+            
+            p {
+                margin:0;
+                padding: 0;
+                width:90%;
+                font-family: $font;
+                a, a:active, a:focus, a:hover, a::after, a::before{
+                    color:$primaryColor;
+                    font-weight: bold;
+                   text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 801px) { 
+    .homeContainer{
+        @include content;
+    
+        .firstChild{
+            @include layout(row, space-between, center);
+            width:50%;
+            margin:0% 25%;
+            padding: 10% 0%;
+            .firstColumn{
+                @include layout(column, flex-start, flex-start);
+                width:40%;
+                h1 {
+                    font: normal normal bold 1.3rem Montserrat;
+                    color:$primaryColor;
+                    margin-bottom:4%;
+                    padding: 0;
+                }
+                p {
+                    margin:0;
+                    padding: 0;
+                    width:90%;
+                    font-size: 0.9rem;
+                    font-family: $font;
+                }
+            }
+            .secondColumn {
+                @include layout(column, flex-start, flex-start);
+                width:45%;
+                img {
+                    width:100%;
+                }
+            }
+        }
+        .secondChild {
+            @include layout(column, flex-start, flex-start);
+            width:55%;
+            margin:0% 25%;
+            padding: 10% 0%;
+            h1 {
+                font: normal normal bold 1.3rem Montserrat;
+                color:$primaryColor;
+                margin-bottom:4%;
+                padding: 0;
+            }
+            
+            .firstLine{
+                @include layout(row, space-between, center);
+                width:100%;
+                padding-bottom: 10%;
+                .firstColumn {
+                    @include layout(column, flex-start, flex-start);
+                    width:40%;
+                    h2 {
+                        font: normal normal bold 1rem Montserrat;
+                        color:$primaryColor;
+                        margin-bottom:4%;
+                        padding: 0;
+                    }
+                    p {
+                        margin:0;
+                        padding: 0;
+                        width:90%;
+                        font-family: $font;
+                        font-size: 0.9rem;
+                    }
+                }
+            
+                .secondColumn {
+                    @include layout(column, flex-start, flex-start);
+                    width:45%;
+                    img {
+                        width:80%;
+                    }
+                }
+                
+            }
+            .secondLine {
+                @include layout(row, space-between, center);
+                width:100%;
+                .firstColumn {
+                    width:40%;
+                    h2 {
+                        font: normal normal bold 1rem Montserrat;
+                        color:$primaryColor;
+                        margin-bottom:4%;
+                        padding: 0;
+                    }
+                    p {
+                        margin:0;
+                        padding: 0;
+                        width:90%;
+                        font-family: $font;
+                        font-size: 0.9rem;
+                    }
+                }
+            
+                .secondColumn {
+                    @include layout(column, flex-start, flex-start);
+                    width:45%;
+                    img {
+                        width:80%;
+                    }
+                }
+                
+            }
+        }
+        .thirdChild {
+            @include layout(column, flex-start, flex-start);
+            width:60%;
+            margin:0% 25%;
+            padding: 0% 0%;
+            h1 {
+                font: normal normal bold 1.3rem Montserrat;
+                color:$primaryColor;
+                margin-bottom:4%;
+                padding: 0;
+            }
+            .firstColumn{
+                @include layout(column, flex-start, flex-start);
+                width:100%;
+                
+                p {
+                    margin:0;
+                    padding: 0;
+                    width:90%;
+                    font-family: $font;
+                    font-size: 0.9rem;
+                    a, a:active, a:focus, a:hover, a::after, a::before{
+                        color:$primaryColor;
+                        font-weight: bold;
+                       text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) { 
+    .homeContainer{
+        @include content;
+    
+        .firstChild{
+            @include layout(row, space-between, center);
+            width:70%;
+            margin:0% 15%;
+            .firstColumn{
+                @include layout(column, flex-start, flex-start);
+                width:120%;
+                margin-right: 7%;
+                h1 {
+                    font: normal normal bold 1.2rem Montserrat;
+                    color:$primaryColor;
+                    margin-bottom:4%;
+                    padding: 0;
+                }
+                p {
+                    margin:0;
+                    padding: 0;
+                    width:90%;
+                    font-size: 0.8rem;
+                    font-family: $font;
+                }
+            }
+            .secondColumn {
+                @include layout(column, flex-start, flex-start);
+                width:100%;
+                img {
+                    width:120%;
+                }
+            }
+        }
+        .secondChild {
+            @include layout(column, flex-start, flex-start);
+            width:70%;
+            margin:0% 15%;
+            h1 {
+                font: normal normal bold 1.2rem Montserrat;
+                color:$primaryColor;
+                margin-bottom:4%;
+                padding: 0;
+            }
+            
+            .firstLine{
+                @include layout(column, flex-start, flex-start);
+                width:100%;
+                padding-bottom: 10%;
+                .firstColumn {
+                    @include layout(column, flex-start, flex-start);
+                    width:100%;
+                    h2 {
+                        font: normal normal bold 1rem Montserrat;
+                        color:rgb(34, 34, 73);
+                        padding: 5% 0%;
+                        margin-bottom:4%;
+                        padding: 0;
+                    }
+                    p {
+                        margin:0;
+                        padding: 0;
+                        width:100%;
+                        font-size: 0.8rem;
+                        font-family: $font;
+                    }
+                }
+            
+                .secondColumn {
+                    @include layout(column, flex-end, flex-end);
+                    width:100%;
+                    img {
+                        width:80%;
+                    }
+                }
+                
+            }
+            .secondLine {
+                @include layout(column, flex-end, flex-end);
+                width:100%;
+                .firstColumn {
+                    width:100%;
+                    h2 {
+                        font: normal normal bold 1rem Montserrat;
+                        color:rgb(34, 34, 73);
+                        margin-bottom:4%;
+                        padding: 0;
+                    }
+                    p {
+                        margin:0;
+                        padding: 0;
+                        width:100%;
+                        font-size: 0.8rem;
+                        font-family: $font;
+                    }
+                }
+                .secondColumnMobile {
+                    @include layout(column, flex-end, flex-end);
+                    width:100%;
+                    img {
+                        width:80%;
+                    }
+                }
+            
+                .secondColumn {
+                    display:none;
+                    img {
+                        width:80%;
+                    }
+                }
+                
+            }
+        }
+        .thirdChild {
+            @include layout(column, flex-start, flex-start);
+            width:100%;
+            margin:0% 15%;
+            padding: 5% 0% 20% 0%;
+            h1 {
+                font: normal normal bold 1.2rem Montserrat;
+                color:$primaryColor;
+                margin-bottom:4%;
+                padding: 0;
+            }
+            .firstColumn{
+                @include layout(column, flex-start, flex-start);
+                width:100%;
+                
+                p {
+                    margin:0;
+                    padding: 0;
+                    width:100%;
+                    font-size: 0.8rem;
+                    font-family: $font;
+                    a, a:active, a:focus, a:hover, a::after, a::before{
+                        color:$primaryColor;
+                        font-weight: bold;
+                       text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

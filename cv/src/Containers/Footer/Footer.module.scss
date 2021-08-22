@@ -1,0 +1,19 @@
+@import '../../main.scss';
+@import '../../theme.scss';
+
+.footerContainer {
+  @include footer;
+   img{
+     width:30%;
+   }
+}
+@media only screen and (max-width: 801px) { 
+  .footerContainer {
+    @include footer;
+     img{
+       width:40%;
+     }
+  }
+}
+@media only screen and (max-width: 450px) { 
+}
